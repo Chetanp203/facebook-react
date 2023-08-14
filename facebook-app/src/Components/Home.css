@@ -1,0 +1,157 @@
+.fb-home{
+    width: 100%;
+    display: flex;
+    background-color: rgb(240,242,245);
+}
+.fb-1{
+    width: 20%;
+    overflow: scroll;
+}
+.cat-list{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.cat-list img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.cat-list h6{
+    padding-top: 3px;
+}
+.fb-2{
+    width: 55%;
+    padding: 20px;
+}
+.story{
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.story img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.upload{
+    width:80%;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: auto;
+}
+.mind{
+    display: flex;
+}
+.mind img{
+    width: 40px;
+    height: 40px;
+    border-radius:  50%;
+    margin-right: 10px;
+}
+.mind input{
+    width: 95%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    background-color:  #f5eded;
+}
+.mind-2{
+    display: flex;
+}
+.mind-3{
+    display: flex;
+    margin: 0px 5%;
+}
+.mind-3 img{
+   margin-right: 5px;
+}
+.post{
+    width:80%;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+}
+.tag{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.tag img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.heading{
+    width: 80%;
+}
+.cros{
+    width: 5%;
+    display: flex;
+  
+}
+.flex{
+    display: flex;
+}
+.post-banner{
+    width: 100%;
+}
+.likes{
+    display: flex;
+    justify-content: space-between;
+    padding:0px 20px;
+}
+.likes img{
+    width: 20px;
+    height: 20px;
+}
+.comments{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.comments p{
+    font-weight: bold;
+}
+.comments i{
+    padding-bottom: 14px;
+    padding-right: 10px;
+}
+.comments div{
+    align-items: center;
+}
+.fb-3{
+    width: 25%;
+    padding: 20px;
+}
+.contacts{
+    display: flex;
+    justify-content: space-between;
+}
+.online{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.online img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}

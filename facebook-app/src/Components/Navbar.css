@@ -1,0 +1,64 @@
+.fb-navbar{
+    width: 100%;
+    height: 65px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 3%;
+    margin-right: 20px;
+}
+.logo img{
+    width: 100%;
+    margin: 5px;
+}
+
+.searchbar{
+    width: 20%;
+    height: 40px;
+    position: relative;
+    margin-right: 5%;
+}
+.searchbar input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5eded;
+    padding-left: 35px;
+    
+}
+.searchbar i{
+    position: absolute;
+     left: 10px;
+     top: 12px;
+}
+.pages{
+    display: flex;
+    align-items: center;
+    margin-right: 6%;
+}
+.page1:hover{
+    border-bottom: 3px solid blue;
+    padding-bottom: 37px;
+}
+.page1{
+    width: 30px;
+    margin: 0px 50px;
+}
+.page1 img{
+    width: 100%;  
+}
+
+.profile-section{
+    display: flex;
+}
+.ps-1{
+    width: 40px;
+    margin-left: 10px;
+}
+.ps-1 img{
+    width: 100%;
+    border-radius: 50%;
+}
