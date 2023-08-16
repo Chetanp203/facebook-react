@@ -1,33 +1,35 @@
 import React from 'react';
 import "./Navbar.css"
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const router = useNavigate();
   return (
     <div className='fb-navbar'>
       <div className="logo">
-        <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png"/>
+        <img onClick={()=>router("/")}  src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" />
       </div>
 
       <div className="searchbar">
         <input type="text" placeholder='Search Facebook' />
-        <i className="fa-solid fa-magnifying-glass" style={{color: '#333333'}}></i>
+        <i className="fa-solid fa-magnifying-glass" style={{ color: '#333333' }}></i>
       </div>
 
       <div className="pages">
         <div className="page1">
-        <i className="fa-solid fa-house fa-xl" style={{color: '#007ecc'}}></i>
+          <i className="fa-solid fa-house fa-xl" style={{ color: '#007ecc' }}></i>
         </div>
         <div className="page1">
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-watch-4560241-3789515.png?f=webp"  />
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-facebook-watch-4560241-3789515.png?f=webp" />
         </div>
         <div className="page1">
-         <img src="https://cdn.icon-icons.com/icons2/3237/PNG/512/website_social_media_marketplace_facebook_menu_selling_icon_197234.png" />
+          <img src="https://cdn.icon-icons.com/icons2/3237/PNG/512/website_social_media_marketplace_facebook_menu_selling_icon_197234.png" />
         </div>
         <div className="page1">
-        <img src="https://t4.ftcdn.net/jpg/02/78/97/71/360_F_278977125_bu72oaGKJ4cwP8UUP5arD9ajQ2dNhkH9.jpg" />
+          <img src="https://t4.ftcdn.net/jpg/02/78/97/71/360_F_278977125_bu72oaGKJ4cwP8UUP5arD9ajQ2dNhkH9.jpg" />
         </div>
         <div className="page1">
-        <img src="https://clipground.com/images/video-game-icon-clipart-3.jpg"  />
+          <img src="https://clipground.com/images/video-game-icon-clipart-3.jpg" />
         </div>
       </div>
 
@@ -42,9 +44,56 @@ const Navbar = () => {
         <div className="ps-1">
           <img src="https://images.vexels.com/media/users/3/223298/isolated/preview/d3c070ed1d488a95f3789c88b7c95674-notifications-bell-icon-flat.png" />
         </div>
-        <div className="ps-1">
-          <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/316407627_2285357611642990_1364941092960111903_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=be3454&_nc_ohc=dwjfNvJf_BYAX-bJPrq&_nc_ht=scontent.fbom5-1.fna&oh=00_AfB5iY275SlPm6xmjJqCttDjRi0qwhqwQ0_umWSPK47Mlg&oe=64DEC744" />
+        <div className="ps-1" >
+          <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/316407627_2285357611642990_1364941092960111903_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=be3454&_nc_ohc=dwjfNvJf_BYAX-bJPrq&_nc_ht=scontent.fbom5-1.fna&oh=00_AfB5iY275SlPm6xmjJqCttDjRi0qwhqwQ0_umWSPK47Mlg&oe=64DEC744" data-bs-toggle="dropdown" aria-expanded="false" />
+          {/* <ul >
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul> */}
+          {/*****drop down div******/}
+          <div className="dropdown-menu">
+            <div className='p-1'>
+              <span>
+                <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/316407627_2285357611642990_1364941092960111903_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=be3454&_nc_ohc=dwjfNvJf_BYAX-bJPrq&_nc_ht=scontent.fbom5-1.fna&oh=00_AfB5iY275SlPm6xmjJqCttDjRi0qwhqwQ0_umWSPK47Mlg&oe=64DEC744" />
+                <span onClick={()=>router("/profile")}>Chetan Patil</span>
+              </span>
+              <hr />
+              <h6>See all profiles</h6>
+            </div>
+            <div className='p-2'>
+              <i className="fa-solid fa-gear fa-xl" style={{ color: '#121212' }}></i>
+              <h6>Settings & privacy</h6>
+            </div>
+            <div className='p-2'>
+              <i className="fa-regular fa-circle-question fa-xl" style={{ color: '#121212' }}></i>
+              <h6>Help & support</h6>
+            </div>
+            <div className='p-2'>
+              <i className="fa-solid fa-moon fa-xl" style={{ color: '#030303' }}></i>
+              <h6>Display & accessibility</h6>
+            </div>
+            <div className='p-2'>
+              <i className="fa-solid fa-message fa-xl" style={{ color: '#0a0a0a' }}></i>
+              <h6>Give feedback</h6>
+            </div>
+            <div className='p-2'>
+              <i className="fa-solid fa-right-from-bracket fa-xl" style={{ color: '#000000' }}></i>
+              <h6>Logout</h6>
+            </div>
+
+            <p>Privacy  · Terms  · Advertising  · Ad choices </p>
+            <p>  · Cookies  ·more · Meta © 2023</p>
+          </div>
+
         </div>
+
+        {/* <div class="dropdown">
+
+
+        </div> */}
+
+
       </div>
 
     </div>

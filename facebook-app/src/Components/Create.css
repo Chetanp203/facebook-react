@@ -1,0 +1,147 @@
+#create-con{
+    width: 100%;
+    display: flex;
+}
+
+.create-left{
+    width: 20%;
+    background-color: white;
+    border-right: 1px solid #ccc;
+    height: 700px;
+}
+.close-home{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+.flex-x{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+}
+.close-home img{
+    width: 40px;
+    height: 40px;
+    
+}
+.prof{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.prof img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.create-right{
+    background-color: rgb(240,242,245);
+    width: 80%;
+    height: 700px;
+}
+
+
+.profile-section{
+    display: flex;
+    float: right;
+    padding: 10px;
+}
+.ps-1{
+    width: 40px;
+    margin-left: 10px;
+}
+.ps-1 img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.dropdown-menu{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+}
+
+.dropdown-menu p{
+    font-size: 14px;
+    line-height: 3px;
+}
+.p-1{
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+}
+.p-1 img{
+    width: 40px;
+    height: 40px;
+}
+.p-1 span{
+    font-weight: bold;
+    padding-left:  20px;
+}
+.p-1 h6{
+    color: blue;
+    padding-left:  20px;
+}
+
+.p-2{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.p-2:hover{
+    background-color: lightgray;
+}
+.p-2 i{
+    padding-right: 20px;
+}
+
+.create-text-photo{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    margin-top: 200px;
+}
+
+.create-photo{
+    width: 50%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(107,132,228);
+    color: white;
+    padding: 100px 30px;
+    text-align: center;
+    margin-right: 20px;
+}
+.create-photo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+.create-text img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+
+.create-text{
+    width: 50%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(190,86,186);
+    color: white;
+    padding: 100px 30px;
+    text-align: center;
+}

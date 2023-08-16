@@ -1,7 +1,9 @@
 import React from 'react';
 import "./Home.css"
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const router = useNavigate();
     return (
         <div className='fb-home'>
             <div className="fb-1">
@@ -59,7 +61,7 @@ const Home = () => {
             </div>
             <div className="fb-2">
                 <div className="story">
-                    <img src="https://www.shareicon.net/data/2015/09/24/106390_add_512x512.png" />
+                    <img onClick={()=>router("/create")} src="https://www.shareicon.net/data/2015/09/24/106390_add_512x512.png" />
                     <div>
                         <h4>Create Story</h4>
                         <p>Share a photo or write something</p>
@@ -69,7 +71,71 @@ const Home = () => {
                 <div className="upload">
                     <div className="mind">
                         <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/316407627_2285357611642990_1364941092960111903_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=be3454&_nc_ohc=dwjfNvJf_BYAX-bJPrq&_nc_ht=scontent.fbom5-1.fna&oh=00_AfB5iY275SlPm6xmjJqCttDjRi0qwhqwQ0_umWSPK47Mlg&oe=64DEC744" />
-                        <input type="text" placeholder='Whats on your mind, Chetan?' />
+                        <input type="text" placeholder='Whats on your mind, Chetan?' data-bs-toggle="modal" data-bs-target="#exampleModal" />
+
+
+                        {/* **************ADD POST****************/}
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="add-post-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create post</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <form class="modal-body">
+                                        <div style={{ display: "flex" }}>
+                                            <img style={{ width: "50px", height: "50px", borderRadius: "50%" }} src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/316407627_2285357611642990_1364941092960111903_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=be3454&_nc_ohc=dwjfNvJf_BYAX-bJPrq&_nc_ht=scontent.fbom5-1.fna&oh=00_AfB5iY275SlPm6xmjJqCttDjRi0qwhqwQ0_umWSPK47Mlg&oe=64DEC744" />
+                                            <div>
+                                                <h5>Chetan Patil</h5>
+                                                <div style={{ display: "flex", backgroundColor: "lightgray", borderRadius: "5px", height: "22px", width: "100px" }}>
+                                                    <i className="fa-solid fa-user-group fa-xs" style={{ color: '#050505', marginLeft: '5px', marginTop: "10px" }}></i>
+                                                    <h6 style={{ padding: "0px 5px" }}>Friends</h6>
+                                                    <i className="fa-solid fa-sort-down" style={{ color: '#000000' }}></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div style={{ width: "100%" }}>
+                                            <input id='write-post' type="text" placeholder="What's on your mind, Chetan?" />
+
+                                        </div>
+
+                                        <div className='add-photo'>
+                                            <i className="fa-solid fa-circle-plus fa-2xl" style={{ color: '#1c1c1c', paddingTop: "60px" }}></i>
+                                            <h5>Add photos/videos</h5>
+                                            <p>or drag and drop</p>
+
+                                        </div>
+
+                                        <div className="add-to-post">
+                                            <h5>Add to your post</h5>
+                                            <div>
+                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/Ivw7nhRtXyo.png" />
+                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/b37mHA1PjfK.png" />
+                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Y4mYLVOhTwq.png" />
+                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y1/r/8zlaieBcZ72.png" />
+                                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/q7MiRkL7MLC.png" />
+                                                <i className="fa-solid fa-ellipsis" style={{color: '#545454'}}></i>
+                                            </div>
+                                        </div>
+
+                                        <input type="submit" value="Post" id='post' />
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        {/* ************************** */}
+
+
                     </div>
                     <hr />
                     <div className="mind-2">
@@ -100,8 +166,8 @@ const Home = () => {
                             </span>
                         </div>
                         <div className='cros'>
-                        <i className="fa-solid fa-ellipsis fa-xl" style={{color: '#404040'}}></i>
-                        <i className="fa-solid fa-xmark fa-xl" style={{color: '#404040',marginLeft:'10px'}}></i>
+                            <i className="fa-solid fa-ellipsis fa-xl" style={{ color: '#404040' }}></i>
+                            <i className="fa-solid fa-xmark fa-xl" style={{ color: '#404040', marginLeft: '10px' }}></i>
                         </div>
                     </div>
                     <img className='post-banner'
@@ -117,16 +183,16 @@ const Home = () => {
                     <hr />
                     <div className="comments">
                         <div className='flex'>
-                        <i className="fa-regular fa-thumbs-up " style={{color: '#3d3d3d'}}></i>
-                        <p>Like</p>
+                            <i className="fa-regular fa-thumbs-up " style={{ color: '#3d3d3d' }}></i>
+                            <p>Like</p>
                         </div>
                         <div className='flex'>
-                        <i className="fa-regular fa-message " style={{color: '#2e2e2e'}}></i>
-                        <p>Comment</p>
+                            <i className="fa-regular fa-message " style={{ color: '#2e2e2e' }}></i>
+                            <p>Comment</p>
                         </div>
                         <div className='flex'>
-                        <i className="fa-solid fa-share " style={{color: '#404040'}}></i>
-                        <p>Share</p>
+                            <i className="fa-solid fa-share " style={{ color: '#404040' }}></i>
+                            <p>Share</p>
                         </div>
                     </div>
                 </div>
@@ -146,8 +212,8 @@ const Home = () => {
                             </span>
                         </div>
                         <div className='cros'>
-                        <i className="fa-solid fa-ellipsis fa-xl" style={{color: '#404040'}}></i>
-                        <i className="fa-solid fa-xmark fa-xl" style={{color: '#404040',marginLeft:'10px'}}></i>
+                            <i className="fa-solid fa-ellipsis fa-xl" style={{ color: '#404040' }}></i>
+                            <i className="fa-solid fa-xmark fa-xl" style={{ color: '#404040', marginLeft: '10px' }}></i>
                         </div>
                     </div>
                     <img className='post-banner'
@@ -163,16 +229,16 @@ const Home = () => {
                     <hr />
                     <div className="comments">
                         <div className='flex'>
-                        <i className="fa-regular fa-thumbs-up " style={{color: '#3d3d3d'}}></i>
-                        <p>Like</p>
+                            <i className="fa-regular fa-thumbs-up " style={{ color: '#3d3d3d' }}></i>
+                            <p>Like</p>
                         </div>
                         <div className='flex'>
-                        <i className="fa-regular fa-message " style={{color: '#2e2e2e'}}></i>
-                        <p>Comment</p>
+                            <i className="fa-regular fa-message " style={{ color: '#2e2e2e' }}></i>
+                            <p>Comment</p>
                         </div>
                         <div className='flex'>
-                        <i className="fa-solid fa-share " style={{color: '#404040'}}></i>
-                        <p>Share</p>
+                            <i className="fa-solid fa-share " style={{ color: '#404040' }}></i>
+                            <p>Share</p>
                         </div>
                     </div>
                 </div>
@@ -184,53 +250,53 @@ const Home = () => {
                 <div className="contacts">
                     <h5>Contacts</h5>
                     <div className='flex'>
-                    <i className="fa-solid fa-magnifying-glass" style={{color: '#404040'}}></i>
-                    <i className="fa-solid fa-ellipsis" style={{color: '#404040',paddingLeft:'10px'}}></i>
+                        <i className="fa-solid fa-magnifying-glass" style={{ color: '#404040' }}></i>
+                        <i className="fa-solid fa-ellipsis" style={{ color: '#404040', paddingLeft: '10px' }}></i>
                     </div>
                 </div>
 
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8" />
                     <h6>Pralhad Bhalekar</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/278398325_10217278896244870_8404466907453319003_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=be3454&_nc_ohc=kQITqgti9-wAX-LPP1t&_nc_ht=scontent.fbom5-1.fna&oh=00_AfCHVDD-Ytc7_p7aqtXhlSXas1sj87OTclcx8IfuMdYwlg&oe=64E05925"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/278398325_10217278896244870_8404466907453319003_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=be3454&_nc_ohc=kQITqgti9-wAX-LPP1t&_nc_ht=scontent.fbom5-1.fna&oh=00_AfCHVDD-Ytc7_p7aqtXhlSXas1sj87OTclcx8IfuMdYwlg&oe=64E05925" />
                     <h6>Pratik Patil</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/284178409_5451337951564816_6382553232208326262_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=be3454&_nc_ohc=CckXy_VqTucAX87BTVe&_nc_ht=scontent.fbom5-1.fna&oh=00_AfAAuxNsYmDt2RpDSgtPigg61sQjn9nHGChz8TySFFCKzA&oe=64DEC82F"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/284178409_5451337951564816_6382553232208326262_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=be3454&_nc_ohc=CckXy_VqTucAX87BTVe&_nc_ht=scontent.fbom5-1.fna&oh=00_AfAAuxNsYmDt2RpDSgtPigg61sQjn9nHGChz8TySFFCKzA&oe=64DEC82F" />
                     <h6>Afzal Shaikh</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/301070611_5324985974236040_7166424138375300703_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=be3454&_nc_ohc=hylFJTXCUfUAX-LcFds&_nc_ht=scontent.fbom5-1.fna&oh=00_AfDik1Mx6riu8b2h1BbzyG3bkQl-22Y3kUnzhmYmg29Nww&oe=64DF6126"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/301070611_5324985974236040_7166424138375300703_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=be3454&_nc_ohc=hylFJTXCUfUAX-LcFds&_nc_ht=scontent.fbom5-1.fna&oh=00_AfDik1Mx6riu8b2h1BbzyG3bkQl-22Y3kUnzhmYmg29Nww&oe=64DF6126" />
                     <h6>Tanvir Patil</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t1.6435-9/143118480_3793894590672010_3688513510672981169_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=be3454&_nc_ohc=GhInqizS0k0AX8rPUb2&_nc_ht=scontent.fbom5-1.fna&oh=00_AfDzRyGSrIhs2X8gNeHBg6GX9V8mmtvrDqxbH2HZyMuWrA&oe=650218A2"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t1.6435-9/143118480_3793894590672010_3688513510672981169_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=be3454&_nc_ohc=GhInqizS0k0AX8rPUb2&_nc_ht=scontent.fbom5-1.fna&oh=00_AfDzRyGSrIhs2X8gNeHBg6GX9V8mmtvrDqxbH2HZyMuWrA&oe=650218A2" />
                     <h6>Naval Gharat</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/361625475_9721928064515216_6783796423455685241_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=be3454&_nc_ohc=zT65q2I08IIAX-Rxn6z&_nc_oc=AQmOJnRcMOb8KJTJX-c3uk0FkJ0OeGldpd6hKvrJYmyR9G5M-CgJPHvIA-0SWPvqqgA&_nc_ht=scontent.fbom5-1.fna&oh=00_AfCFo0q_OiYbEeBXsRUjeGTtJi65u0tznaNk1IxykT_Imw&oe=64DFD5AF"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/361625475_9721928064515216_6783796423455685241_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=be3454&_nc_ohc=zT65q2I08IIAX-Rxn6z&_nc_oc=AQmOJnRcMOb8KJTJX-c3uk0FkJ0OeGldpd6hKvrJYmyR9G5M-CgJPHvIA-0SWPvqqgA&_nc_ht=scontent.fbom5-1.fna&oh=00_AfCFo0q_OiYbEeBXsRUjeGTtJi65u0tznaNk1IxykT_Imw&oe=64DFD5AF" />
                     <h6>Sagar Patil</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t1.6435-9/58377418_2338216959551240_9133493584123658240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=be3454&_nc_ohc=1mkoHRVP8oIAX_Fdb7A&_nc_ht=scontent.fbom5-1.fna&oh=00_AfCzXqxcrrQo_0YZcadZlCVomNBA3bh1BBzGwGvlnNYsdQ&oe=6502093D"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t1.6435-9/58377418_2338216959551240_9133493584123658240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=be3454&_nc_ohc=1mkoHRVP8oIAX_Fdb7A&_nc_ht=scontent.fbom5-1.fna&oh=00_AfCzXqxcrrQo_0YZcadZlCVomNBA3bh1BBzGwGvlnNYsdQ&oe=6502093D" />
                     <h6>Akshay Mhatre</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/259318849_105694565278889_4597020034333819081_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=be3454&_nc_ohc=wYvMsSc0PfUAX-dkwil&_nc_ht=scontent.fbom5-1.fna&oh=00_AfDD4J6vZIpsreOIr1PaCph9Ad7GTY-Pal6FIH30w3bNWA&oe=64DF09B2"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/259318849_105694565278889_4597020034333819081_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=be3454&_nc_ohc=wYvMsSc0PfUAX-dkwil&_nc_ht=scontent.fbom5-1.fna&oh=00_AfDD4J6vZIpsreOIr1PaCph9Ad7GTY-Pal6FIH30w3bNWA&oe=64DF09B2" />
                     <h6>Satish Mhatre</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8" />
                     <h6>Pralhad Bhalekar</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8" />
                     <h6>Pralhad Bhalekar</h6>
                 </div>
                 <div className='online'>
-                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8"  />
+                    <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/297934156_5596671307049679_7232557897812763077_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=be3454&_nc_ohc=92f70V7_kVIAX8K-2UN&_nc_ht=scontent.fbom5-1.fna&oh=00_AfBrqeuzKHURN4QGZl3m9_avhsTURnQCb_Jeq3Mnsxd9Yg&oe=64E07EE8" />
                     <h6>Pralhad Bhalekar</h6>
                 </div>
 

@@ -6,6 +6,8 @@ import Footer from './Components/Footer';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import MayBeShowNavbar from './Components/MayBeShowNavbar';
+import Profile from './Components/Profile';
+import Create from './Components/Create';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
     <Navbar/>
     </MayBeShowNavbar>
     <Routes>
+      <Route exact path='create' element={<Create/>}/>
+      <Route exact path='/profile' element={<Profile/>}/>
       <Route exact path="/register" element={<Register/>}/>
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/" element={<Home/>}/>

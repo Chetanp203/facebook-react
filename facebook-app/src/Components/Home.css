@@ -66,6 +66,7 @@
     border-radius: 20px;
     padding-left: 20px;
     background-color:  #f5eded;
+    outline: none;
 }
 .mind-2{
     display: flex;
@@ -153,5 +154,68 @@
     height: 30px;
     border-radius: 50%;
     margin-right: 10px;
+
+}
+
+.add-post-header{
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.add-post-header h1{
+    padding: 0px 160px;
+    font-weight: bolder;
+}
+.add-post-header button{
+    background-color: lightgrey;
+    border-radius: 50%;
+    padding: 10px;
+   
+}
+
+#write-post{
+    width:100%;
+    border:none;
+    background-color: white;
+    outline: none;
+}
+.add-photo{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(233, 231, 231);
+    height: 200px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.add-to-post{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+.add-to-post h5{
+    padding-right: 60px;
+}
+
+.add-to-post img{
+    width: 30px;
+    height: 30px;
+}
+
+#post{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(230, 227, 227);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
 
 }

@@ -7,7 +7,16 @@ const MayBeShowNavbar = ({children}) => {
 
     useEffect(()=>{
      console.log("this is location",location)
-     if (location.pathname === "/login"){
+     if (location.pathname === "/login" ){
+        setShowNavbar(false)
+     }else{
+        setShowNavbar(true)
+     }
+    },[location])
+    
+    useEffect(()=>{
+     console.log("this is location",location)
+     if (location.pathname === "/create" ){
         setShowNavbar(false)
      }else{
         setShowNavbar(true)
