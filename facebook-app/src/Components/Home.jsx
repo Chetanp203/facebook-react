@@ -11,8 +11,8 @@ const Home = () => {
                     <img src="https://scontent.fbom5-1.fna.fbcdn.net/v/t39.30808-6/316407627_2285357611642990_1364941092960111903_n.jpg?_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=be3454&_nc_ohc=dwjfNvJf_BYAX-bJPrq&_nc_ht=scontent.fbom5-1.fna&oh=00_AfB5iY275SlPm6xmjJqCttDjRi0qwhqwQ0_umWSPK47Mlg&oe=64DEC744" />
                     <h6>Chetan Patil</h6>
                 </div>
-                <div className="cat-list">
-                    <img src="https://cdn0.iconfinder.com/data/icons/social-basic-2/32/Social_Media_Basic_Social_facebook__digital__Friends_-512.png" />
+                <div className="cat-list" onClick={()=>router("/friends")}>
+                    <img  src="https://cdn0.iconfinder.com/data/icons/social-basic-2/32/Social_Media_Basic_Social_facebook__digital__Friends_-512.png" />
                     <h6>Friends</h6>
                 </div>
                 <div className="cat-list">

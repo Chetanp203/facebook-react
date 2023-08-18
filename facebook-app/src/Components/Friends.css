@@ -1,0 +1,90 @@
+.friends-con{
+    width: 100%;
+    display: flex;
+    background-color: rgb(240,242,245);
+}
+
+.flex-jus{
+    display: flex;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+}
+.friends-left{
+    width: 25%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2.6px;
+    padding: 15px;
+    
+}
+.friends-left div{
+    align-items: center;
+    margin: 5px 0px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+.friends-left div:hover{
+    background-color: rgb(231, 230, 230);
+}
+
+.friends-left div h5{
+    padding-left: 10px;
+}
+
+.friends-right{
+    width: 75%;
+    padding: 20px;
+}
+
+.peoples{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.frnd-card{
+    width: 23%;
+    height: 390px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 8px;
+}
+.frnd-card h5{
+    padding-left: 10px;
+}
+.frnd-card p{
+    padding-left: 10px;
+}
+
+.frnd-card img{
+    width: 100%;
+    height: 225px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.add-frnd{
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(221,233,244);
+    color: rgb(23,142,236);
+    margin:3px 12px;
+}
+.remove{
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(231, 228, 228);
+    margin:3px 12px;
+}

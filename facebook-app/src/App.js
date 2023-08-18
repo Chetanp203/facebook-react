@@ -8,6 +8,8 @@ import Register from './Components/Register';
 import MayBeShowNavbar from './Components/MayBeShowNavbar';
 import Profile from './Components/Profile';
 import Create from './Components/Create';
+import Friends from './Components/Friends';
+import SearchPeople from './Components/SearchPeople';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
     <Navbar/>
     </MayBeShowNavbar>
     <Routes>
-      <Route exact path='create' element={<Create/>}/>
+      <Route exact path='search-people' element={<SearchPeople/>}/>
+      <Route exact path='/friends' element={<Friends/>}/>
+      <Route exact path='/create' element={<Create/>}/>
       <Route exact path='/profile' element={<Profile/>}/>
       <Route exact path="/register" element={<Register/>}/>
       <Route exact path="/login" element={<Login/>}/>
